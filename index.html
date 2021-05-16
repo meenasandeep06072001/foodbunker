@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>||Food-Bunker||</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="assignment1.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        /*  navigation bar + hotel banner css  */
+        #headercontainer {
+            background-color: snow;
+            height: 130px;
+            width: 1350px;
+        }
+
+        #divbanner {
+            background-color: black;
+            height: 80px;
+            width: 1350px;
+
+            position: relative;
+            bottom: 75px;
+            left: 3px;
+            z-index: 1;
+
+        }
+
+        #logo {
+            font-size: large;
+            color: white;
+            float: left;
+            border: 2px white solid;
+            padding-bottom: 5px;
+            position: relative;
+            left: 50px;
+        }
+
+        #name {
+            color: white;
+            text-align: center;
+            margin: 0;
+            position: relative;
+            right: 70px;
+        }
+
+        #logo2 {
+            font-size: 10px;
+
+            color: white;
+            float: left;
+            border: 2px white solid;
+            padding-bottom: 5px;
+            position: relative;
+            left: 75px;
+        }
+
+        #navbar {
+            background-color: black;
+            height: 50px;
+            width: 1350px;
+            margin: 0px;
+            border: 2px white solid;
+            position: fixed;
+            z-index: 2;
+        }
+
+        li {
+            font-size: 15px;
+            float: left;
+            color: white;
+            list-style-type: none;
+            padding: 0px 20px 0px 20px;
+            text-align: center;
+            position: relative;
+            right: -150px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+
+        }
+
+        /*  intro section  css  */
+
+        #introsection {
+            height: auto;
+            width: 1350px;
+
+            position: relative;
+            top: -75px;
+        }
+
+
+        .introinfo {
+            height: 550px;
+            width: 1350px;
+
+        }
+
+        #introduction {
+            color: black;
+            font-family: cursive;
+            text-align: center;
+            width: 1350px;
+            border: 2px black solid;
+            border-radius: 3px;
+        }
+
+        .divintro {
+            height: 500px;
+            width: 400px;
+            float: left;
+            font-family: cursive;
+            text-align: center;
+            font-size: 125%;
+            margin-left: 150px;
+            padding: 0px 10px 0 10px;
+            border: 3px #610B0B solid;
+            border-radius: 10px;
+
+        }
+
+        h2 {
+            color: rgb(0, 0, 0);
+
+        }
+
+        h4 {
+            color: #FF4000;
+
+        }
+
+
+        .divposter {
+            height: 500px;
+            width: 440px;
+            float: left;
+            margin-left: 50px;
+            border: 3px #610B0B solid;
+            border-radius: 10px;
+            position: relative;
+            left: 50px;
+
+        }
+
+        #imgposter {
+            height: 480px;
+            width: 420px;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            border-radius: 10px;
+        }
+
+
+        /* specilities and review section         */
+
+        .specialities {
+            color: #DF013A;
+            text-align: center;
+            font-size: 200%;
+        }
+
+        #menubox {
+            height: auto;
+            width: 1350px;
+
+            background-color: snow;
+
+            border: 3px crimson solid;
+            border-radius: 5px;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+        }
+
+        .dishcard {
+            height: 500px;
+            width: 250px;
+            background-color: black;
+            margin: 7px 8px 7px 8px;
+
+
+            border-radius: 5px;
+        }
+
+        .dishimg {
+            height: 200px;
+            width: 250px;
+            border-radius: 5px;
+
+            margin: 0px;
+        }
+
+        .dishdetail {
+            text-align: left;
+            color: rgb(216, 211, 213);
+            font-size: 16px;
+            height: 200px;
+            width: 250px;
+
+
+        }
+
+        #addbutton {
+            float: right;
+            position: relative;
+            right: 4px;
+        }
+
+        .sign {
+            height: 20px;
+            width: 20px;
+            position: relative;
+            top: 50px;
+            left: 5px;
+        }
+
+        #pricetag {
+            float: right;
+            position: relative;
+            top: 35px;
+        }
+
+        #searchbox {
+            height: 40px;
+            width: 1340px;
+            text-align: center;
+            color: rgb(255, 0, 43);
+            font-size: 16px;
+            font-weight: bold;
+            border: 4px rgb(0, 0, 0) solid;
+            margin: 15px;
+            background-image: url("lens.png");
+            background-repeat: no-repeat;
+            background-size: 30px;
+        }
+
+
+        /* review section */
+
+        #readreviews {
+            height: auto;
+            width: 1350px;
+
+            background-color: snow;
+
+            border: 3px crimson solid;
+            border-radius: 5px;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+        }
+
+        .review {
+            height: 500px;
+            width: 250px;
+            background-color: black;
+            color: silver;
+            font-size: 120%;
+            margin: 5px;
+            border-radius: 10px;
+
+        }
+
+        .reviewerimg {
+            height: 210px;
+            width: 250px;
+            border-radius: 10px;
+
+
+        }
+
+        #givereview {
+            height: 550px;
+            width: 1350px;
+            border: 3px crimson solid;
+            border-radius: 10px;
+            margin: 10px;
+            background-image: url(rajsthan.png);
+            background-repeat: no-repeat;
+            background-size: 1352px 610px;
+
+        }
+
+        .input {
+            text-align: center;
+            color: snow;
+        }
+
+        /*footersection*/
+        #footercontainer {
+            height: 300px;
+            width: 1350px;
+            background-color: black;
+            border: 3px black solid;
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+        .social {
+            height: 50px;
+            width: 50px;
+        }
+
+        .link {
+            text-align: center;
+            color: snow;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        #socialdiv {
+            height: 55px;
+            width: 380px;
+
+            position: relative;
+            left: 475px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <a name="top" />
+    <div id="headercontainer">
+        <div id="navbar">
+            <h3 id="logo2">꧁༺||F-B||༻꧂</h3>
+            <ul>
+                <li> <a href="#Intro"> Intro</a> </li>
+                <li><a href="#Specialities"> Specialities</a></li>
+                <li> <a href="#Recommendations"> Recommendations</a></li>
+                <li><a href="#Review"> Review</a></li>
+                <li><a href="#Footer"> Footer</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="divbanner">
+        <h3 id="logo">꧁༺||F-B||༻꧂</h3>
+
+        <h1 id="name">꧁༺||Food-Bunker||༻꧂</h1>
+    </div>
+    </div>
+
+    <!--scrolldown link--><a name="Intro" />
+
+    <!--introduction section-->
+    <div id="introsection">
+        <h2 id="introduction">༺༺༺INTRODUCTION༻༻༻</h2>
+        <div class="introinfo">
+
+            <div class="divintro">
+
+                <h2>༺LOCATION༻</h2>
+                <h4> A/144 Staion Road
+                    Kota Rajasthan 324002</h4>
+                <h2>༺HOURS༻</h2>
+                <h4>Thursday — Monday, 9am to 5pm
+                    (kitchen closes at 3pm, marketplace open til 5pm)
+                    Closed Tuesdays & Wednesdays</h4>
+                <h2>༺CONTACT༻</h2>
+                <h4>foodbunker@gmail.com</h4>
+
+            </div>
+            <div class="divposter">
+                <img id="imgposter" src="F-B poster.JPG" alt="Poster">
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!--scrolldownlink-->
+    <a name="Specialities" />
+    <!--specilities section-->
+    <h3 class="specialities">꧁༺꧁༺꧁༺Specialities༻꧂༻꧂༻꧂</h3>
+    <h3 class="specialities"> ༺Special Dishes ༻ </h3>
+
+    <div id="menubox">
+
+        <!--card1-->
+        <div class="dishcard ">
+            <img class="dishimg" src="dish4.jpg" alt="dishimg" height="120" width="175">
+            <div class="dishdetail">
+                <p> Dish Name: <strong> Biryani </strong>
+                    <input id="addbutton" type="button" value="Add+" style="color: rgb(39, 150, 5);">
+                </p>
+
+                <p><strong> Discription:</strong><br>
+                    This mutton biryani recipe
+                    has layers of mutton and
+                    saffron-milk infused rice cooked
+                    'dum'style.</p>
+            </div>
+            <img class="sign" src="nonveg.jpg" alt="nonveg">
+            <p id="pricetag">Price: ₹400 </p>
+        </div>
+
+        <!--card2-->
+        <div class="dishcard ">
+            <img class="dishimg" src="dish3.jpg" alt="dishimg" height="120" width="175">
+            <div class="dishdetail">
+                <p> Dish Name: <strong> pizza</strong>
+                    <input id="addbutton" type="button" value="Add+" style="color: rgb(39, 150, 5);">
+                </p>
+
+                <p><strong> Discription:</strong><br>
+                    Dish of Italian origin
+                    consisting of a round,
+                    flattened base of leavened
+                    wheat-based dough topped with
+                    tomatoes, cheese, etc.</p>
+            </div>
+            <img class="sign" src="veg.jpg" alt="veg">
+            <p id="pricetag">Price: ₹300 </p>
+        </div>
+
+        <!--card3-->
+        <div class="dishcard ">
+            <img class="dishimg" src="dish2.jpg" alt="dishimg" height="120" width="175">
+            <div class="dishdetail">
+                <p> Dish Name: <strong> Burger</strong>
+                    <input id="addbutton" type="button" value="Add+" style="color: rgb(39, 150, 5);">
+                </p>
+
+                <p><strong> Discription:</strong><br>
+                    A hamburger is a sandwich
+                    consistingof one or more cooked
+                    patties of ground meat,placed
+                    inside a sliced bread roll or bun.</p>
+            </div>
+            <img class="sign" src="veg.jpg" alt="veg">
+            <p id="pricetag">Price: ₹50 </p>
+        </div>
+
+        <!--card4-->
+        <div class="dishcard ">
+            <img class="dishimg" src="dish6.jpg" alt="dishimg" height="120" width="175">
+            <div class="dishdetail">
+                <p> Dish Name: <strong> Rasgulla</strong>
+                    <input id="addbutton" type="button" value="Add+" style="color: rgb(39, 150, 5);">
+                </p>
+
+                <p><strong> Discription:</strong><br>
+                    It is made from ball-shaped dumplings of
+                    chhena ,cooked in light syrup made of sugar.</p>
+            </div>
+            <img class="sign" src="veg.jpg" alt="veg">
+            <p id="pricetag">Price: ₹200 </p>
+        </div>
+
+        <!--card5-->
+        <div class="dishcard ">
+            <img class="dishimg" src="dish5.jpg" alt="dishimg" height="120" width="175">
+            <div class="dishdetail">
+                <p> Dish Name: <strong> Gullabjamun</strong>
+                    <input id="addbutton" type="button" value="Add+" style="color: rgb(39, 150, 5);">
+                </p>
+
+                <p><strong> Discription:</strong><br>
+                    Gulab jamun is a milk-solid-based sweet
+                    from the Indian subcontinent,and a type
+                    of mithai, popular in India.</p>
+            </div>
+            <img class="sign" src="veg.jpg" alt="veg">
+            <p id="pricetag">Price: ₹200 </p>
+        </div>
+
+    </div>
+
+    <!--recommendation section-->
+    <a name="Recommendations" />
+    <h3 class="specialities">꧁༺꧁༺꧁༺Recommendations༻꧂༻꧂༻꧂</h3>
+    <h3 class="specialities"> ༺Menu Dishes ༻ </h3>
+    <div> <input id="searchbox" type="search" placeholder=" Search Dish"></div>
+    <div id="menubox">
+        <!--card0-->
+        <div class="dishcard ">
+            <img class="dishimg" src="dish1.jpg" alt="dishimg" height="120" width="175">
+            <div class="dishdetail">
+                <p> Dish Name: <strong> samosa </strong>
+                    <input id="addbutton" type="button" value="Add+" style="color: rgb(39, 150, 5);">
+                </p>
+
+                <p><strong> Discription:</strong><br>
+                    A samosa is a South Asian
+                    fried or baked pastry with a
+                    savory filling like spiced
+                    potatoes,onions, peas..</p>
+            </div>
+            <img class="sign" src="nonveg.jpg" alt="nonveg">
+            <p id="pricetag">Price: ₹25 </p>
+        </div>
+
+
+        <!--card1-->
+        <div class="dishcard ">
+            <img class="dishimg" src="dish4.jpg" alt="dishimg" height="120" width="175">
+            <div class="dishdetail">
+                <p> Dish Name: <strong> Biryani </strong>
+                    <input id="addbutton" type="button" value="Add+" style="color: rgb(39, 150, 5);">
+                </p>
+
+                <p><strong> Discription:</strong><br>
+                    This mutton biryani recipe
+                    has layers of mutton and
+                    saffron-milk infused rice cooked
+                    'dum'style.</p>
+            </div>
+            <img class="sign" src="nonveg.jpg" alt="nonveg">
+            <p id="pricetag">Price: ₹400/plate </p>
+        </div>
+
+        <!--card2-->
+        <div class="dishcard ">
+            <img class="dishimg" src="dish3.jpg" alt="dishimg" height="120" width="175">
+            <div class="dishdetail">
+                <p> Dish Name: <strong> pizza</strong>
+                    <input id="addbutton" type="button" value="Add+" style="color: rgb(39, 150, 5);">
+                </p>
+
+                <p><strong> Discription:</strong><br>
+                    Dish of Italian origin
+                    consisting of a round,
+                    flattened base of leavened
+                    wheat-based dough topped with
+                    tomatoes, cheese, etc.</p>
+            </div>
+            <img class="sign" src="veg.jpg" alt="veg">
+            <p id="pricetag">Price: ₹300 </p>
+        </div>
+
+        <!--card3-->
+        <div class="dishcard ">
+            <img class="dishimg" src="dish7.jpg" alt="dishimg" height="120" width="175">
+            <div class="dishdetail">
+                <p> Dish Name: <strong> Jalebi</strong>
+                    <input id="addbutton" type="button" value="Add+" style="color: rgb(39, 150, 5);">
+                </p>
+
+                <p><strong> Discription:</strong><br>
+                    It is made by deep-frying maida flour batter in
+                    circular shapes, which are then soaked
+                    in sugar syrup.</p>
+            </div>
+            <img class="sign" src="veg.jpg" alt="veg">
+            <p id="pricetag">Price: ₹120/kg </p>
+        </div>
+
+        <!--card4-->
+        <div class="dishcard ">
+            <img class="dishimg" src="dish6.jpg" alt="dishimg" height="120" width="175">
+            <div class="dishdetail">
+                <p> Dish Name: <strong> Rasgulla</strong>
+                    <input id="addbutton" type="button" value="Add+" style="color: rgb(39, 150, 5);">
+                </p>
+
+                <p><strong> Discription:</strong><br>
+                    It is made from ball-shaped dumplings of
+                    chhena ,cooked in light syrup made of sugar.</p>
+            </div>
+            <img class="sign" src="veg.jpg" alt="veg">
+            <p id="pricetag">Price: ₹220/kg </p>
+        </div>
+
+        <!--card5-->
+        <div class="dishcard ">
+            <img class="dishimg" src="dish5.jpg" alt="dishimg" height="120" width="175">
+            <div class="dishdetail">
+                <p> Dish Name: <strong> Gullabjamun</strong>
+                    <input id="addbutton" type="button" value="Add+" style="color: rgb(39, 150, 5);">
+                </p>
+
+                <p><strong> Discription:</strong><br>
+                    Gulab jamun is a milk-solid-based sweet
+                    from the Indian subcontinent,and a type
+                    of mithai, popular in India.</p>
+            </div>
+            <img class="sign" src="veg.jpg" alt="veg">
+            <p id="pricetag">Price: ₹200/kg </p>
+        </div>
+        <!--card6-->
+        <div class="dishcard ">
+            <img class="dishimg" src="dish2.jpg" alt="dishimg" height="120" width="175">
+            <div class="dishdetail">
+                <p> Dish Name: <strong> Burger</strong>
+                    <input id="addbutton" type="button" value="Add+" style="color: rgb(39, 150, 5);">
+                </p>
+
+                <p><strong> Discription:</strong><br>
+                    A hamburger is a sandwich
+                    consistingof one or more cooked
+                    patties of ground meat,placed
+                    inside a sliced bread roll or bun.</p>
+            </div>
+            <img class="sign" src="veg.jpg" alt="veg">
+            <p id="pricetag">Price: ₹50 </p>
+        </div>
+        <!--card7-->
+        <div class="dishcard ">
+            <img class="dishimg" src="dish2.jpg" alt="dishimg" height="120" width="175">
+            <div class="dishdetail">
+                <p> Dish Name: <strong> Kaju katali</strong>
+                    <input id="addbutton" type="button" value="Add+" style="color: rgb(39, 150, 5);">
+                </p>
+
+                <p><strong> Discription:</strong><br>
+                    Kaju means cashew; Barfi is often, but
+                    not always, made by thickening milk
+                    with sugar and other ingredients.</p>
+            </div>
+            <img class="sign" src="veg.jpg" alt="veg">
+            <p id="pricetag">Price: ₹400/kg </p>
+        </div>
+        <!--card8-->
+        <div class="dishcard ">
+            <img class="dishimg" src="dish9.jpg" alt="dishimg" height="120" width="175">
+            <div class="dishdetail">
+                <p> Dish Name: <strong> chocolate cake</strong>
+                    <input id="addbutton" type="button" value="Add+" style="color: rgb(39, 150, 5);">
+                </p>
+
+                <p><strong> Discription:</strong><br>
+                    Chocolate cake or chocolate gâteau is a
+                    cake flavored with melted chocolate, cocoa
+                    powder, or both
+                </p>
+            </div>
+            <img class="sign" src="veg.jpg" alt="veg">
+            <p id="pricetag">Price: ₹600 </p>
+        </div>
+        <!--card9-->
+        <div class="dishcard ">
+            <img class="dishimg" src="dish10.jpg" alt="dishimg" height="120" width="175">
+            <div class="dishdetail">
+                <p> Dish Name: <strong> daal baati churma</strong>
+                    <input id="addbutton" type="button" value="Add+" style="color: rgb(39, 150, 5);">
+                </p>
+
+                <p><strong> Discription:</strong><br>
+                    Dal-baati-churma is a popular pairing of three dishes
+                    and a complete meal. Dal Baati is a popular Rajasthani
+                    dish consisting of mainly Uradh Dal (combination of five
+                    lentils) and Baati i.e. small wheat bread balls. Baati is
+                    dipped in pure ghee and served hot in a traditional
+                    earthen pot
+                </p>
+            </div>
+            <img class="sign" src="veg.jpg" alt="veg">
+            <p id="pricetag">Price: ₹600 </p>
+        </div>
+
+    </div>
+
+
+    <!--review section -->
+    <a name="Review" />
+    <h3 style="color: crimson; text-align: center; font-size: 30px;">꧁༺꧁༺꧁༺Reviews༻꧂༻꧂༻꧂</h3>
+
+    <div id="reviewbox">
+        <div id="readreviews">
+
+            <div class="review">
+                <img class="reviewerimg" src="luv.jpg" alt="reviewer" height="120" width="175">
+                <div class="reviewdetail">
+                    <p><strong>Name: </strong> Luv </p>
+
+                    <p><strong> Discription:</strong><br>
+                        Dal baati churma was perfect i like the whole dish
+                        if you are here in rajasthan you must try.
+                    </p>
+                </div>
+
+            </div>
+            <div class="review">
+                <img class="reviewerimg" src="Neeraj.jpg" alt="reviewer" height="120" width="175">
+                <div class="reviewdetail">
+                    <p><strong>Name: </strong> Neetaj Pandey </p>
+
+                    <p><strong> Discription:</strong><br>
+                        Rasgulla of this place is very delicious i like that.
+                        i also like biryani you should try.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="review">
+                <img class="reviewerimg" src="sawan.jpg" alt="reviewer" height="120" width="175">
+                <div class="reviewdetail">
+                    <p><strong>Name: </strong> Sawan </p>
+
+                    <p><strong> Discription:</strong><br>
+                        Whole the team enjoy a lot , food was great.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="review">
+                <img class="reviewerimg" src="SUMAN.jpg" alt="reviewer" height="120" width="175">
+                <div class="reviewdetail">
+                    <p><strong>Name: </strong>Suman </p>
+
+                    <p><strong> Discription:</strong><br>
+                        Whole the family enjoy a lot.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="review">
+                <img class="reviewerimg" src="surya.jpg" alt="reviewer" height="120" width="175">
+                <div class="reviewdetail">
+                    <p><strong>Name: </strong>Surya raj nayak </p>
+
+                    <p><strong> Discription:</strong><br>
+                        I tried all the dishes and they are great,you can order any dish you will enjoy.
+
+                    </p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div id="givereview">
+            <h1 class="input">꧁༺༺Give Review༻༻꧂</h1>
+            <form>
+                <h3 class="input">Name:<input type="name" placeholder="Type here..."> </h3>
+                <h3 class="input">Email:<input type="email" placeholder="Type here..."></h3>
+                <h3 class="input" style="position: relative; left: -80px; ">Review:</h3>
+                <h3 class="input"> <textarea id="textarea" cols="30" rows="10" placeholder="Type here..."></textarea>
+                </h3>
+                <h3 class="input "> <input type="submit"> <input type="reset"></h3>
+            </form>
+            <h1 class="input"> ꧁༺༺༺༺༺༻༻༻༻꧂ </h1>
+
+        </div>
+    </div>
+
+    <a name="Footer" />
+    <div id="footercontainer">
+        <h4 class="link" style="text-decoration: underline;"> Social media links </h4>
+        <div id="socialdiv">
+
+            <a class="link" href="https://www.facebook.com/" target="_blank"> <img class="social" src="fb.png" alt="fb">
+            </a>
+            <a class="link" href="https://www.instagram.com/" target="_blank"> <img class="social" src="insta.png"
+                    alt="insta"></a>
+            <a class="link" href="https://in.linkedin.com/" target="_blank"> <img class="social" src="linkedin.png"
+                    alt="linkedin"></a>
+            <a class="link" href="https://twitter.com/?lang=en" target="_blank"> <img class="social" src="twitter.jpg"
+                    alt="twitter"></a>
+
+        </div>
+
+        <p class="link">&copy;2021 Food-bunker
+            <a class="link" href="" target="_blank">Terms and conditions</a>
+            <a class="link" href="" target="_blank"> Privacy policy </a>
+        </p>
+        <h4 class="link" style="text-decoration: underline;"> Contact us </h4>
+        <p class="link">A/144 Staion Road Kota Rajasthan 324002</p>
+        <p class="link"> foodbunker@gmail.com </p>
+        <a href="#Top">
+            <p class="link">Back-to-top</p>
+        </a>
+
+
+    </div>
+
+</body>
+
+</html>
